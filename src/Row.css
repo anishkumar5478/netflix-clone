@@ -1,0 +1,31 @@
+.row_posters {
+  display: flex;
+  overflow-y: hidden;
+  overflow-x: scroll;
+  padding-left: 20px;
+}
+
+.row_posters::-webkit-scrollbar {
+  display: none;
+}
+.row_poster {
+  object-fit: contain;
+  width: 100%;
+  max-height: 100px;
+  margin-right: 10px;
+  transition: transform 450ms;
+  animation: animateHeroImage 1s;
+}
+
+.row_poster:hover {
+  transform: scale(1.08);
+}
+
+@keyframes animateHeroImage {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
